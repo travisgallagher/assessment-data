@@ -10,3 +10,14 @@ def sales_reports(log_file): # Creates a function called sales_reports, passing 
 
 
 sales_reports(log_file) # this is just invoking our function and passing in our log_file
+
+def bigMelon(log_file):
+    for line in log_file:
+        values = line.split(',')
+        melonsOrdered = int(values[2])
+        if melonsOrdered >= 10:
+            print(values)
+
+bigMelon(log_file)
+
+log_file.close()
